@@ -1,0 +1,141 @@
+{
+    "endpoints": [
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.endpoint.opcua.OpcUaEndpoint",
+            "tcpPort": 8081
+        }
+    ],
+    "persistence": {
+        "@class": "de.fraunhofer.iosb.ilt.faaast.service.persistence.memory.PersistenceInMemory"
+    },
+    "messageBus": {
+        "@class": "de.fraunhofer.iosb.ilt.faaast.service.messagebus.internal.MessageBusInternal"
+    },
+    "assetConnections": [
+        {
+            "@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.mqtt.MqttAssetConnection",
+            "serverUri": "tcp://localhost:1883",
+            "valueProviders": {
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)name": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.name"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)position": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.position"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)velocity": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.velocity"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)effort": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.effort"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)sec": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.header.stamp.sec"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)parent_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].header.frame_id"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)child_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].child_frame_id"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)timestamp_sec_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].header.stamp.sec"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)timestamp_nanosec_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].header.stamp.nanosec"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)translation_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].transform.translation"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)rotation_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].transform.rotation"
+                }
+            },
+            "subscriptionProviders": {
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)name": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.name"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)position": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.position"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)velocity": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.velocity"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)effort": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.effort"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_states, (Property)sec": {
+                    "topic": "ros/joint_states",
+                    "format": "JSON",
+                    "query": "$.header.stamp.sec"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)parent_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].header.frame_id"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)child_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].child_frame_id"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)timestamp_sec_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].header.stamp.sec"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)timestamp_nanosec_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].header.stamp.nanosec"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)translation_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].transform.translation"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:tf_1, (Property)rotation_1": {
+                    "topic": "ros/tf",
+                    "format": "JSON",
+                    "query": "$.transforms[0].transform.rotation"
+                }
+            },
+            "requestHandlers": {
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_trajectory, (Property)position": {
+                    "topic": "ros/joint_trajectory",
+                    "format": "JSON",
+                    "template": "{ \"points\": [ { \"positions\": {{ value }} }] }"
+                }
+            }
+        }
+    ]
+}

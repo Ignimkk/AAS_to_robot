@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "43c3f5d0-d9ef-48c7-9c6a-b97e40a58b8f",
+		"name": "Asset Synchronization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30244257"
+	},
+	"item": [
+		{
+			"name": "HTTP Asset",
+			"item": [
+				{
+					"name": "Get value",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "{{host}}:{{port-http}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{host}}:{{port-http}}/value",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port-http}}",
+							"path": [
+								"value"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set value to 1",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Host",
+								"value": "{{host}}:{{port-http}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"value\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port-http}}/value",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port-http}}",
+							"path": [
+								"value"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set value to 10",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Host",
+								"value": "{{host}}:{{port-http}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"value\": 10\r\n}"
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port-http}}/value",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port-http}}",
+							"path": [
+								"value"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute add 1 & 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Host",
+								"value": "{{host}}:{{port-http}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"input1\": 1,\r\n        \"input2\": 2\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port-http}}/add",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port-http}}",
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FA³ST Service",
+			"item": [
+				{
+					"name": "Get value_opcua",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port-faaast}}/api/v3.0/submodels/{{submodel-id-encoded}}/submodel-elements/{{property-value-opcua}}",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port-faaast}}",
+							"path": [
+								"api",
+								"v3.0",
+								"submodels",
+								"{{submodel-id-encoded}}",
+								"submodel-elements",
+								"{{property-value-opcua}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get value_http",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port-faaast}}/api/v3.0/submodels/{{submodel-id-encoded}}/submodel-elements/{{property-value-http}}",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port-faaast}}",
+							"path": [
+								"api",
+								"v3.0",
+								"submodels",
+								"{{submodel-id-encoded}}",
+								"submodel-elements",
+								"{{property-value-http}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "port-http",
+			"value": "5001",
+			"type": "string"
+		},
+		{
+			"key": "port-faaast",
+			"value": "8080",
+			"type": "string"
+		},
+		{
+			"key": "submodel-id-encoded",
+			"value": "dXJuOmFhczppZDpleGFtcGxlOmRlbW86c3VibW9kZWw6MQ==",
+			"type": "string"
+		},
+		{
+			"key": "property-value-opcua",
+			"value": "value_opcua",
+			"type": "string"
+		},
+		{
+			"key": "property-value-http",
+			"value": "value_http",
+			"type": "string"
+		}
+	]
+}

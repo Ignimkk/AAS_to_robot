@@ -1,0 +1,6 @@
+logs/
+*.jar
+*.p12
+PKI/
+pki/
+USERS_PKI/

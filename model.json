@@ -1,0 +1,346 @@
+{
+    "assetAdministrationShells": [
+        {
+            "idShort": "RobotArmAAS",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "urn:aas:id:example:robot:arm:aas:1",
+            "submodels": [
+                {
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "urn:aas:id:example:robot:arm:submodel:1"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        }
+    ],
+    "submodels": [
+        {
+            "idShort": "joint_states",
+            "id": "urn:aas:id:example:robot:arm:submodel:joint_states",
+            "submodelElements": [
+                {
+                    "idShort": "name",
+                    "category": "Parameter",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "idShort": "position",
+                    "category": "Parameter",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "idShort": "velocity",
+                    "category": "Parameter",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "idShort": "effort",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "idShort": "command",
+                    "category": "Parameter",
+                    "valueType": "xs:string",
+                    "modelType": "Property"
+                },
+                {
+                    "idShort": "sec",
+                    "category": "Parameter",
+                    "valueType": "xs:int",
+                    "modelType": "Property"
+                }
+            ],
+            "kind": "Instance",
+            "modelType": "Submodel"
+        },
+        {
+            "idShort": "upper_to_forearm",
+            "id": "urn:aas:id:example:robot:arm:submodel:tf_1",
+            "modelType": "Submodel",
+            "submodelElements": [
+                {
+                    "idShort": "parent_1",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "upper_arm_link"
+                },
+                {
+                    "idShort": "child_1",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "forearm_link"
+                },
+                {
+                    "idShort": "timestamp_sec_1",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 962
+                },
+                {
+                    "idShort": "timestamp_nanosec_1",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 763000000
+                },
+                {
+                    "idShort": "translation_1",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.0, 0.0, 0.0]"
+                },
+                {
+                    "idShort": "rotation_1",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.0, 0.0, 0.0, 0.0]"
+                }  
+            ],
+            "kind": "Instance"
+          },
+          {
+            "idShort": "shoulder_to_upper_arm",
+            "modelType": "Submodel",
+            "id": "urn:aas:id:example:robot:arm:submodel:tf_2",
+            "submodelElements": [
+                {
+                    "idShort": "parent",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "shoulder_link"
+                },
+                {
+                    "idShort": "child",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "upper_arm_link"
+                },
+                {
+                    "idShort": "timestamp_sec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "timestamp_nanosec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "translation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.0, 0.0, 0.0]"
+                },
+                {
+                    "idShort": "rotation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.7071067811694489, -1.1257564562102226e-05, 1.1257564559793259e-05, 0.7071067810244189]"
+
+                }
+            ]
+          },
+          {
+            "idShort": "base_to_shoulder",
+            "modelType": "Submodel",
+            "id": "urn:aas:id:example:robot:arm:submodel:tf_3",
+            "submodelElements": [
+                {
+                    "idShort": "parent",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "base_link_inertia"
+                },
+                {
+                    "idShort": "child",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "shoulder_link"
+                },
+                {
+                    "idShort": "timestamp_sec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "timestamp_nanosec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "translation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.0, 0.0, 0.0]"
+                },
+                {
+                    "idShort": "rotation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.7071067811694489, -1.1257564562102226e-05, 1.1257564559793259e-05, 0.7071067810244189]"
+
+                }
+            ]
+          },
+          {
+            "idShort": "forearm_to_wrist",
+            "modelType": "Submodel",
+            "id": "urn:aas:id:example:robot:arm:submodel:tf_4",
+            "submodelElements": [
+                {
+                    "idShort": "parent",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "forearm_link"
+                },
+                {
+                    "idShort": "child",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "wrist_1_link"
+                },
+                {
+                    "idShort": "timestamp_sec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "timestamp_nanosec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "translation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.0, 0.0, 0.0]"
+                },
+                {
+                    "idShort": "rotation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.7071067811694489, -1.1257564562102226e-05, 1.1257564559793259e-05, 0.7071067810244189]"
+
+                }
+            ]
+          },
+          {
+            "idShort": "wrist_to_wrist2",
+            "modelType": "Submodel",
+            "id": "urn:aas:id:example:robot:arm:submodel:tf_5",
+            "submodelElements": [
+                {
+                    "idShort": "parent",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "wrist_1_link"
+                },
+                {
+                    "idShort": "child",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "wrist_2_link"
+                },
+                {
+                    "idShort": "timestamp_sec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "timestamp_nanosec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "translation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.0, 0.0, 0.0]"
+                },
+                {
+                    "idShort": "rotation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.7071067811694489, -1.1257564562102226e-05, 1.1257564559793259e-05, 0.7071067810244189]"
+
+                }
+            ]
+          },
+          {
+            "idShort": "wrist_to_wrist2",
+            "modelType": "Submodel",
+            "id": "urn:aas:id:example:robot:arm:submodel:tf_6",
+            "submodelElements": [
+                {
+                    "idShort": "parent",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "wrist_2_link"
+                },
+                {
+                    "idShort": "child",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "wrist_3_link"
+                },
+                {
+                    "idShort": "timestamp_sec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "timestamp_nanosec",
+                    "modelType": "Property",
+                    "valueType": "xs:int",
+                    "value": 0
+                },
+                {
+                    "idShort": "translation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.0, 0.0, 0.0]"
+                },
+                {
+                    "idShort": "rotation",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.7071067811694489, -1.1257564562102226e-05, 1.1257564559793259e-05, 0.7071067810244189]"
+
+                }
+            ]
+          },
+          {
+            "idShort": "joint_trajectory",
+            "modelType": "Submodel",
+            "id": "urn:aas:id:example:robot:arm:submodel:joint_trajectory",
+            "submodelElements": [
+                {
+                    "idShort": "position",
+                    "modelType": "Property",
+                    "valueType": "xs:string",
+                    "value": "[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+                }
+            ]
+          }
+    ],
+    "conceptDescriptions": []
+}
