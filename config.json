@@ -70,6 +70,11 @@
                     "topic": "ros/tf",
                     "format": "JSON",
                     "query": "$.transforms[0].transform.rotation"
+                },
+                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_trajectory, (Property)position": {
+                    "topic": "mqtt/joint_trajectory",
+                    "format": "JSON",
+                    "template": "{ \"points\": [ { \"positions\": ${value} }] }"
                 }
             },
             "subscriptionProviders": {
@@ -127,13 +132,6 @@
                     "topic": "ros/tf",
                     "format": "JSON",
                     "query": "$.transforms[0].transform.rotation"
-                }
-            },
-            "requestHandlers": {
-                "(Submodel)urn:aas:id:example:robot:arm:submodel:joint_trajectory, (Property)position": {
-                    "topic": "ros/joint_trajectory",
-                    "format": "JSON",
-                    "template": "{ \"points\": [ { \"positions\": {{ value }} }] }"
                 }
             }
         }
